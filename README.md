@@ -136,3 +136,7 @@ If successful, will return:
     ]
 }
 ```
+# Usage
+
+Clone the git repository and `npm install`. 
+I used Docker-compose so download `Docker-compose` and use the command `docker-compose up`
