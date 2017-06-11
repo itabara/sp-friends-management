@@ -1,0 +1,23 @@
+{
+  "name": "sp-friend-management",
+  "version": "0.0.1",
+  "description": "A friend management api server to create friend connections, retrieve friends, retrieve common friends list, subscribe to updates, block updates, retrieve all emails that can receive updates",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/index.test.js"
+  },
+  "author": "Stacy Goh <stacy.gohys@gmail.com> (http://imstacy.com)",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.1",
+    "body-parser": "^1.17.2",
+    "chai": "^4.0.2",
+    "chai-http": "^3.0.0",
+    "express": "^4.15.3",
+    "mocha": "^3.4.2",
+    "mongodb": "^2.2.28"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}
