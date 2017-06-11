@@ -4,7 +4,8 @@
   "description": "A friend management api server to create friend connections, retrieve friends, retrieve common friends list, subscribe to updates, block updates, retrieve all emails that can receive updates",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/index.test.js"
+    "test": "mocha ./tests/index.test.js",
+    "eslint": "./node_modules/.bin/eslint ."    
   },
   "author": "Stacy Goh <stacy.gohys@gmail.com> (http://imstacy.com)",
   "license": "ISC",

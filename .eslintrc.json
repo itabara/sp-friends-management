@@ -17,7 +17,7 @@
         "no-this-before-super": "warn",
         "no-undef": "error",
         "no-unreachable": "error",
-        "no-unused-vars": "error",
+        "no-unused-vars": "warn",
         "no-trailing-spaces": "error",
         "object-curly-spacing": ["error", "always"],
         "valid-typeof": "warn"

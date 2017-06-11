@@ -4,8 +4,9 @@ const async = require("async");
 
 const router = express.Router();
 
+let db;
 common.on("connected", function() {
-  db = common.db;
+	db = common.db;
 });
 
 router.post('/create_friend', function(req, res, next) {
@@ -26,7 +27,6 @@ router.post('/create_friend', function(req, res, next) {
 							'_id': friends[index],
 							'connections': [friends[connection]]
 						}, function( err, result ) {
-							console.log(err);
 							if ( err ) { next(new Error(err)); }
 							else { callback(); }
 						});

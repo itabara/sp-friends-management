@@ -5,7 +5,17 @@ This project is a simple friend management system where you can create friend co
 # Introduction
 I coded it in Javascript (NodeJS) and used MongoDB as the database to store information mainly because 1) I know it best and time is pressing, 2) it is faster to setup and even though the data is relational, MongoDB can achieve the same outcome. If I had more time and it would be used in the future for long term projects, I would have chosen SQL.
 
+The unit tests are written using the JS framework **Mocha** with the assertion library, **Chai**.
+
 # Usage
+
+Clone the git repository and `npm install`. 
+I used Docker-compose so download `Docker-compose` and use the command `docker-compose up`
+
+To see if the tests pass, run `npm test` and `npm run eslint`
+
+# API end points
+
 ## create_friend
 Creates a friend connection between 2 people.
 
@@ -136,7 +146,3 @@ If successful, will return:
     ]
 }
 ```
-# Usage
-
-Clone the git repository and `npm install`. 
-I used Docker-compose so download `Docker-compose` and use the command `docker-compose up`
