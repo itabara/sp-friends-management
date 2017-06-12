@@ -34,38 +34,30 @@ describe('SP friend management::Api endpoints', () => {
 	});
 
 	it('/retrieve_friends::should have an email field', (done) => {
-		let obj = {
-			email: 'andy@example.com'
-		}
 		chai.request(server)
-			.post('/api/retrieve_friends')
-			.send(obj)
+			.get('/api/retrieve_friends')
+			.query({ email: 'andy@example.com' })
 			.end((err, res) => {
 				res.should.have.status(200);
 				res.body.should.be.a('object');
 				res.body.should.have.property('success').eql(true);
 				res.body.should.have.property('friends');
+				res.body.friends.should.be.a('array');
 				res.body.should.have.property('count');
 				done();
 			});
 	});
 
 	it('/retrieve_common_friends::should have a friends field', (done) => {
-		let obj = {
-			friends:
-				[
-					'andy@example.com',
-					'john@example.com'
-				]
-		}
 		chai.request(server)
-			.post('/api/retrieve_common_friends')
-			.send(obj)
+			.get('/api/retrieve_common_friends')
+			.query({ friends: ['andy@example.com', 'john@example.com'] })
 			.end((err, res) => {
 				res.should.have.status(200);
 				res.body.should.be.a('object');
 				res.body.should.have.property('success').eql(true);
 				res.body.should.have.property('friends');
+				res.body.friends.should.be.a('array');
 				res.body.should.have.property('count');
 				done();
 			});
@@ -115,6 +107,7 @@ describe('SP friend management::Api endpoints', () => {
 				res.body.should.be.a('object');
 				res.body.should.have.property('success').eql(true);
 				res.body.should.have.property('recipients');
+				res.body.recipients.should.be.a('array');
 				done();
 			});
 	});
