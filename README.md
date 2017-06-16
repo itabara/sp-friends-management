@@ -9,8 +9,7 @@ The unit tests are written using the JS framework **Mocha** with the assertion l
 
 # Usage
 
-Clone the git repository and `npm install`. 
-I used Docker-compose so download `Docker-compose` and use the command `docker-compose up`
+Clone the git repository. I used Docker-compose so download `Docker-compose` and use the command `docker-compose build` and then `docker-compose up`
 
 To see if the tests pass, run `npm test` and `npm run eslint`
 
