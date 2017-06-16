@@ -15,7 +15,7 @@ mongodb.connect(url, function (err, db) {
   } else {
     exports.db = db;
     console.log("Connected OK");
-    exports.emit("Connected");
+    exports.emit("connected");
   }
 });
 console.log("Connecting to database...");
